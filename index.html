@@ -120,8 +120,13 @@
       <div class="container contact-container">
         <div class="contact-info">
           <h2>تواصل معنا</h2>
-          <p>يمكنك التواصل معنا مباشرة عبر تطبيق واتساب أو الهاتف:</p>
-          <p class="phone"><i class="fa-brands fa-whatsapp"></i> 0505781824</p>
+          <p>يمكنك التواصل معنا مباشرة عبر تطبيق واتساب:</p>
+          <!-- رقم الواتساب مع أيقونة قابلة للنقر ليفتح واتساب مباشرة -->
+          <p class="phone">
+            <a href="https://wa.me/966505781824" class="whatsapp-link" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> 0505781824
+            </a>
+          </p>
           <p>
             أو امسح رمز الاستجابة السريعة التالي للتواصل السريع:
           </p>
@@ -129,8 +134,8 @@
         </div>
         <div class="contact-form">
           <h3>أو أرسل لنا رسالة عبر النموذج</h3>
-          <!-- يمكنكم تعديل action بإضافة معرف النموذج من Formspree -->
-          <form action="https://formspree.io/f/your_form_id" method="POST">
+          <!-- يتم إرسال الرسالة عبر FormSubmit إلى بريد WireX -->
+          <form action="https://formsubmit.co/eleibra9@gmail.com" method="POST">
             <div class="form-group">
               <label for="name">الاسم الكامل</label>
               <input type="text" id="name" name="الاسم" required />
@@ -143,11 +148,13 @@
               <label for="message">رسالتك</label>
               <textarea id="message" name="الرسالة" rows="4" required></textarea>
             </div>
+            <input type="hidden" name="_subject" value="رسالة جديدة من صفحة التواصل" />
+            <input type="hidden" name="_next" value="thankyou.html" />
+            <input type="hidden" name="_captcha" value="false" />
             <button type="submit" class="btn btn-secondary">إرسال</button>
           </form>
           <p class="form-note">
-            ملاحظة: يتم معالجة رسائلك عبر خدمة Formspree. تفضل بزيارة لوحة
-            التحكم لديهم لرؤية الرسائل المرسلة.
+            سيتم إرسال رسالتك إلى بريدنا مباشرة وسنقوم بالرد عليك في أقرب وقت.
           </p>
         </div>
       </div>

@@ -499,3 +499,17 @@ img {
     flex: 1 1 100%;
   }
 }
+
+/*
+ * روابط واتساب المخصصة:
+ * يجعل لون الرابط هو نفسه لون النص ولا يضع خطًا تحت النص. عند المرور فوق الرابط، يتغير اللون إلى اللون الأساسي مع خط سفلي.
+ */
+.whatsapp-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}

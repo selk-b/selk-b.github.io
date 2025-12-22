@@ -35,8 +35,8 @@
       <div class="container">
         <h2 class="section-title">طلب خدمة</h2>
         <p class="section-desc">الرجاء اختيار الخدمات المطلوبة وملء بياناتك لتواصلنا معك.</p>
-        <!-- نموذج طلب الخدمة: غيّر action إلى معرف نموذجك في Formspree -->
-        <form action="https://formspree.io/f/your_form_id" method="POST" class="order-form">
+        <!-- نموذج طلب الخدمة: يرسل الطلب إلى بريد WireX عبر FormSubmit -->
+        <form action="https://formsubmit.co/eleibra9@gmail.com" method="POST" class="order-form">
           <fieldset class="form-section">
             <legend>اختر الخدمات</legend>
             <!-- التخطيط والحلول مجانية مع الخدمة -->
@@ -114,10 +114,13 @@
             </div>
           </fieldset>
           <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+          <!-- يمكن تخصيص عنوان الرسالة والصفحة التالية بعد الإرسال -->
+          <input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX" />
+          <input type="hidden" name="_next" value="thankyou.html" />
+          <input type="hidden" name="_captcha" value="false" />
         </form>
         <p class="form-note">
-          سيتم إرسال طلبك إلى بريدنا وسيتم التواصل معك في أقرب وقت.
-          تأكد من إدخال بيانات صحيحة ليتم التواصل معك بسهولة.
+          سيتم إرسال طلبك إلى بريدنا وستصلك رسالة تأكيد. تأكد من إدخال بيانات صحيحة ليتم التواصل معك بسهولة.
         </p>
       </div>
     </main>
