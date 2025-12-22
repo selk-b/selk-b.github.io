@@ -41,13 +41,13 @@
   </div>
 
   <script>
-    const name = localStorage.getItem("clientName");
+  const name = localStorage.getItem("clientName");
 
-    if (name) {
-      document.getElementById("title").innerText = "شكراً لك " + name + " 🌟";
-      document.getElementById("msg").innerText = "تم استلام طلبك بنجاح يا " + name;
-      localStorage.removeItem("clientName");
-    }
-  </script>
+  if (name) {
+    document.getElementById("title").innerText = "شكراً لك " + name + " 🌟";
+    document.getElementById("msg").innerText = "تم استلام طلبك بنجاح";
+    localStorage.removeItem("clientName");
+  }
+</script>
 </body>
 </html>
