@@ -31,10 +31,21 @@
 
 <body>
   <div class="box">
-    <h2>شكراً لك 🌟</h2>
-    <p>تم استلام طلبك بنجاح</p>
+    <h2 id="title">شكراً لك 🌟</h2>
+    <p id="msg">تم استلام طلبك بنجاح</p>
     <p>سيتم التواصل معك في أقرب وقت</p>
     <a href="index.html">العودة للصفحة الرئيسية</a>
   </div>
+
+  <!-- هذا كل السحر -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+
+    if (name) {
+      document.getElementById("title").innerText = "شكراً لك " + name + " 🌟";
+      document.getElementById("msg").innerText = "تم استلام طلبك بنجاح يا " + name;
+    }
+  </script>
 </body>
 </html>
