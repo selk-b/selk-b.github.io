@@ -15,7 +15,7 @@
   <div class="container header-container">
     <div class="logo">
       <a href="index.html">
-        <img src="assets/wirex_logo_white.png" class="site-logo" />
+        <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
       </a>
       <p class="tagline">خبراء الشبكات والإنترنت</p>
     </div>
@@ -24,49 +24,72 @@
 
 <main class="order-page">
   <div class="container">
+    <h2 class="section-title">طلب خدمة</h2>
 
-    <h2>طلب خدمة</h2>
+    <form id="orderForm"
+          action="https://formsubmit.co/eleibra9@gmail.com"
+          method="POST">
 
-    <form id="orderForm" action="https://formsubmit.co/eleibra9@gmail.com" method="POST">
+      <!-- الخدمات -->
+      <fieldset class="form-section">
+        <legend>اختر الخدمات</legend>
 
-      <!-- الاسم -->
-      <div class="form-group">
-        <label>الاسم الكامل</label>
-        <input type="text" name="name" placeholder="اكتب اسمك الكامل" required>
-      </div>
+        <label><input type="checkbox" name="الخدمات[]" value="التخطيط والحلول"> التخطيط والحلول</label><br>
+        <label><input type="checkbox" name="الخدمات[]" value="تمديد كوابل"> تمديد كوابل</label><br>
+        <label><input type="checkbox" name="الخدمات[]" value="تهيئة راوتر"> تهيئة راوتر</label><br>
+        <label><input type="checkbox" name="الخدمات[]" value="مخارج جدارية"> مخارج جدارية</label>
+      </fieldset>
 
-      <!-- الجوال -->
-      <div class="form-group">
-        <label>رقم الجوال</label>
-        <input type="tel" name="الجوال" placeholder="0501234567" required>
-      </div>
+      <!-- البيانات -->
+      <fieldset class="form-section">
+        <legend>بياناتك الشخصية</legend>
 
-      <!-- المدينة -->
-      <div class="form-group">
-        <label>المدينة</label>
-        <select name="المدينة" required>
-          <option value="">اختر</option>
-          <option>الدمام</option>
-          <option>الخبر</option>
-          <option>القطيف</option>
-          <option>الظهران</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label>الاسم الكامل</label>
+          <input type="text" id="clientName" name="الاسم" placeholder="اكتب اسمك الكامل" required />
+        </div>
 
-      <!-- إعدادات FormSubmit -->
-      <input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX">
-      <input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html">
-      <input type="hidden" name="_captcha" value="false">
+        <div class="form-group">
+          <label>رقم الجوال</label>
+          <input type="tel" name="الجوال" placeholder="0501234567" required />
+        </div>
 
-      <button type="submit">إرسال الطلب</button>
+        <div class="form-group">
+          <label>المدينة</label>
+          <select name="المدينة" required>
+            <option value="">اختر</option>
+            <option>الدمام</option>
+            <option>الخبر</option>
+            <option>القطيف</option>
+            <option>الظهران</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>ملاحظات</label>
+          <textarea name="ملاحظات" rows="3"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- إعدادات الإرسال -->
+      <input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX" />
+      <input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <button type="submit" class="btn btn-primary">إرسال الطلب</button>
     </form>
-
   </div>
 </main>
 
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Ibrahim Ali. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
 <script>
   document.getElementById("orderForm").addEventListener("submit", function () {
-    const name = document.querySelector('input[name="name"]').value;
+    const name = document.getElementById("clientName").value;
     localStorage.setItem("clientName", name);
   });
 </script>
