@@ -1,130 +1,144 @@
 <!DOCTYPE html>
-<!--
-  صفحة طلب الخدمة
-  يتم استخدام هذه الصفحة لسلة الطلبات بحيث يختار العميل الخدمات المطلوبة 
-  ويملأ بيانات الاتصال والموقع. عند الضغط على زر الإرسال يتم إرسال الطلب 
-  عبر خدمة Formspree إلى بريدك الإلكتروني.
--->
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF‑8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>طلب خدمة – WireX</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-XxQxD9wreklftx9NvW7Xu4hD6lCJ5TND9ZRixMX+fKZVkdyifV+WLB6ADm3kQ7eBj6WKuXnjDVx8DawePYVIsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-container">
-        <div class="logo">
-          <!-- شعار WireX المخصص -->
-          <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
-          <p class="tagline">خبراء الشبكات والإنترنت</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>طلب خدمة – WireX</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
+      </a>
+      <p class="tagline">خبراء الشبكات والإنترنت</p>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#services">الخدمات</a></li>
+        <li><a href="order.html" class="active">طلب خدمة</a></li>
+        <li><a href="index.html#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="order-page">
+  <div class="container">
+    <h2 class="section-title">طلب خدمة</h2>
+    <p class="section-desc">الرجاء اختيار الخدمات المطلوبة وملء بياناتك لتواصلنا معك.</p>
+
+    <!-- ✅ الفورم الصحيح -->
+    <form action="https://formsubmit.co/eleibra9@gmail.com" method="POST">
+
+      <fieldset class="form-section">
+        <legend>اختر الخدمات</legend>
+
+        <p class="free-plan-note">التخطيط والحلول مجانية مع الخدمة</p>
+
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" name="الخدمات[]" value="التخطيط وإيجاد الحلول (خدمة مجانية)" />
+            <img src="assets/service_plan.png" class="service-icon" />
+            التخطيط وإيجاد الحلول (خدمة مجانية)
+          </label>
+
+          <label>
+            <input type="checkbox" name="الخدمات[]" value="تمديد الكوابل وتركيب رؤوس إيثرنت" />
+            <img src="assets/service_cable.png" class="service-icon" />
+            تمديد الكوابل وتركيب رؤوس إيثرنت
+          </label>
+
+          <label>
+            <input type="checkbox" name="الخدمات[]" value="تهيئة المودم أو الراوتر كنقطة توزيع" />
+            <img src="assets/service_router.png" class="service-icon" />
+            تهيئة المودم أو الراوتر كنقطة توزيع
+          </label>
+
+          <label>
+            <input type="checkbox" name="الخدمات[]" value="تركيب المخارج الجدارية" />
+            <img src="assets/service_port.png" class="service-icon" />
+            تركيب المخارج الجدارية
+          </label>
         </div>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="index.html#services">الخدمات</a></li>
-            <li><a href="order.html" class="active">طلب خدمة</a></li>
-            <li><a href="index.html#contact">تواصل معنا</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="order-page">
-      <div class="container">
-        <h2 class="section-title">طلب خدمة</h2>
-        <p class="section-desc">الرجاء اختيار الخدمات المطلوبة وملء بياناتك لتواصلنا معك.</p>
-        <!-- نموذج طلب الخدمة: يرسل الطلب إلى بريد WireX عبر FormSubmit -->
-            <legend>اختر الخدمات</legend>
-            <!-- التخطيط والحلول مجانية مع الخدمة -->
-            <p class="free-plan-note">التخطيط والحلول مجانية مع الخدمة</p>
-            <div class="checkbox-group">
-              <!-- الخدمة الأولى: التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية) -->
-              <label>
-                <input type="checkbox" name="الخدمات[]" value="التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية)" />
-                <img src="assets/service_plan.png" alt="" class="service-icon" />
-                التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية)
-              </label>
-              <!-- الخدمة الثانية: تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45) -->
-              <label>
-                <input type="checkbox" name="الخدمات[]" value="تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45)" />
-                <img src="assets/service_cable.png" alt="" class="service-icon" />
-                تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45)
-              </label>
-              <!-- الخدمة الثالثة: تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع -->
-              <label>
-                <input type="checkbox" name="الخدمات[]" value="تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع" />
-                <img src="assets/service_router.png" alt="" class="service-icon" />
-                تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع
-              </label>
-              <!-- الخدمة الرابعة: تركيب المخارج الجدارية وصيانتها -->
-              <label>
-                <input type="checkbox" name="الخدمات[]" value="تركيب المخارج الجدارية وصيانتها" />
-                <img src="assets/service_port.png" alt="" class="service-icon" />
-                تركيب المخارج الجدارية وصيانتها
-              </label>
-            </div>
-            <p class="smart-home-note">
-              أنظمة البيت الذكية<br />
-              <span class="small-note">اسأل عنها لمعرفة المزيد</span>
-            </p>
-          </fieldset>
-          <fieldset class="form-section">
-            <legend>بياناتك الشخصية</legend>
-            <div class="form-group">
-              <label for="fullName">الاسم الكامل</label>
-              <input type="text" id="fullName" name="الاسم" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">رقم الجوال (واتساب)</label>
-              <input type="tel" id="phone" name="الجوال" pattern="[0-9]{10}" placeholder="مثال: 0501234567" required />
-            </div>
-            <div class="form-group">
-              <label for="city">المدينة</label>
-              <select id="city" name="المدينة" required>
-                <option value="">اختر المدينة</option>
-                <option value="الدمام">الدمام</option>
-                <option value="الخبر">الخبر</option>
-                <option value="القطيف">القطيف</option>
-                <option value="الظهران">الظهران</option>
-                <option value="أخرى">أخرى</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="district">الحي أو المنطقة</label>
-              <input type="text" id="district" name="الحي/المنطقة" required />
-            </div>
-            <div class="form-group">
-              <label for="placeType">نوع المكان</label>
-              <select id="placeType" name="نوع المكان" required>
-                <option value="">اختر نوع المكان</option>
-                <option value="شقة">شقة</option>
-                <option value="فيلا">فيلا</option>
-                <option value="مكتب">مكتب</option>
-                <option value="محل تجاري">محل تجاري</option>
-                <option value="أخرى">أخرى</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="notes">ملاحظات إضافية</label>
-              <textarea id="notes" name="ملاحظات" rows="3" placeholder="أضف أي تفاصيل تهمنا (اختياري)"></textarea>
-            </div>
-          </fieldset>
-          <!-- يمكن تخصيص عنوان الرسالة والصفحة التالية بعد الإرسال -->
-          <input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX" />
-          <input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html">
-          <input type="hidden" name="_captcha" value="false" />
-        <form action="https://formsubmit.co/eleibra9@gmail.com" method="POST">
-        <p class="form-note">
-          سيتم إرسال طلبك إلى بريدنا وستصلك رسالة تأكيد. تأكد من إدخال بيانات صحيحة ليتم التواصل معك بسهولة.
+
+        <p class="smart-home-note">
+          أنظمة البيت الذكية<br />
+          <span class="small-note">اسأل عنها لمعرفة المزيد</span>
         </p>
-      </div>
-    </main>
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Ibrahim. جميع الحقوق محفوظة.</p>
-      </div>
-    </footer>
-  </body>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>بياناتك الشخصية</legend>
+
+        <div class="form-group">
+          <label>الاسم الكامل</label>
+          <input type="text" name="الاسم" required />
+        </div>
+
+        <div class="form-group">
+          <label>رقم الجوال (واتساب)</label>
+          <input type="tel" name="الجوال" placeholder="0501234567" required />
+        </div>
+
+        <div class="form-group">
+          <label>المدينة</label>
+          <select name="المدينة" required>
+            <option value="">اختر</option>
+            <option>الدمام</option>
+            <option>الخبر</option>
+            <option>القطيف</option>
+            <option>الظهران</option>
+            <option>أخرى</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>الحي / المنطقة</label>
+          <input type="text" name="الحي" required />
+        </div>
+
+        <div class="form-group">
+          <label>نوع المكان</label>
+          <select name="نوع المكان" required>
+            <option value="">اختر</option>
+            <option>شقة</option>
+            <option>فيلا</option>
+            <option>مكتب</option>
+            <option>محل تجاري</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>ملاحظات</label>
+          <textarea name="ملاحظات" rows="3"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- إعدادات FormSubmit -->
+      <input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX">
+      <input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+
+    </form>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 WireX. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+</body>
 </html>
