@@ -64,15 +64,21 @@
 
     /* زر العودة – ثقيل وواضح */
 .btn-back {
-  display: block;
+  display: flex;                 /* الحل */
+  align-items: center;           /* توسيط عمودي */
+  justify-content: center;       /* توسيط أفقي */
+
   width: 100%;
-  padding: 17px;
+  padding: 18px;                 /* ارتفاع مريح */
   font-size: 17px;
   font-weight: 700;
-  background: #1F6FA5;          /* أزرق أهدأ */
+
+  background: #1F6FA5;           /* الأزرق الهادئ */
   color: #ffffff;
+
   border-radius: 18px;
   text-decoration: none;
+
   box-shadow: 0 8px 20px rgba(31, 111, 165, 0.25);
   transition: all 0.2s ease;
 }
@@ -80,6 +86,7 @@
 .btn-back:hover {
   background: #195f8f;
   transform: translateY(-1px);
+}
 }
     }
 
