@@ -68,6 +68,33 @@
         font-size: 16px;
       }
     }
+    
+    /* هيدر ذكي */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* حالة الهيدر بعد النزول */
+.site-header.scrolled {
+  padding: 6px 0;
+  background: rgba(15, 76, 117, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+/* الهيدر الطبيعي */
+.site-header {
+  padding: 18px 0;
+}
+
+/* نثبت حجم اللوقو */
+.site-logo {
+  max-height: 64px;
+  width: auto;
+}
+    
   </style>
 </head>
 
