@@ -1,123 +1,103 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تم استلام الطلب | WireX</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تم استلام الطلب – WireX</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     body {
-      font-family: 'Tajawal', Arial;
-      background: #f2f4f7;
+      margin: 0;
+      font-family: "Tajawal", sans-serif;
+      background: #f4f6f8;
+    }
+
+    .thankyou-wrapper {
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
-      padding: 16px;
+      padding: 20px;
     }
 
-    .box {
-      background: #ffffff;
-      padding: 50px 40px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-      max-width: 440px;
+    .thankyou-card {
       width: 100%;
+      max-width: 420px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 28px 22px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+      text-align: center;
     }
 
-    .box h2 {
-      font-size: 26px;
-      margin-bottom: 18px;
+    .thankyou-card h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
       color: #0F4C75;
-      font-weight: 700;
     }
 
-    .box p {
-      font-size: 16px;
-      color: #444;
-      line-height: 1.9;
-      margin: 10px 0;
-    }
-
-    .status {
+    .thankyou-card .status {
       background: #EAF4FB;
       color: #0F4C75;
-      padding: 12px;
-      border-radius: 10px;
-      font-weight: 600;
-      margin: 20px 0;
       font-size: 15px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      font-weight: 600;
     }
 
-    .info {
-      font-size: 14px;
-      color: #666;
-      margin-top: 8px;
+    .thankyou-card p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 20px;
     }
 
-    .box a {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 13px 26px;
+    .thankyou-card .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 700;
       background: #0F4C75;
       color: #fff;
+      border-radius: 14px;
       text-decoration: none;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: 0.2s;
+      transition: background 0.2s ease;
     }
 
-    .box a:hover {
-      background: #0c3e60;
-    }
-
-    @media (max-width: 480px) {
-      .box {
-        padding: 40px 24px;
-      }
-      .box h2 {
-        font-size: 22px;
-      }
+    .thankyou-card .btn:hover {
+      background: #0c3d60;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="box">
-    <h2 id="title">تم استلام طلبك بنجاح</h2>
+  <div class="thankyou-wrapper">
+    <div class="thankyou-card">
 
-    <div class="status" id="msg">
-      تم تسجيل طلبك في النظام
+      <h2>✨ شكرًا لك</h2>
+
+      <div class="status">
+        تم تسجيل طلبك بنجاح في النظام
+      </div>
+
+      <p>
+        فريقنا سيقوم بمراجعة الطلب والتواصل معك
+        في أقرب وقت ممكن.
+        <br />
+        وقت الرد المتوقع خلال 24 ساعة.
+      </p>
+
+      <a href="index.html" class="btn">
+        العودة للصفحة الرئيسية
+      </a>
+
     </div>
-
-    <p>
-      فريقنا سيقوم بمراجعة الطلب والتواصل معك في أقرب وقت ممكن.
-    </p>
-
-    <p class="info">
-      وقت الرد المتوقع: خلال 24 ساعة
-    </p>
-
-    <a href="index.html">العودة للصفحة الرئيسية</a>
   </div>
-
-  <script>
-    const name = localStorage.getItem("clientName");
-
-    if (name) {
-      document.getElementById("title").innerText =
-        "شكرًا لك " + name + " 🌟";
-
-      document.getElementById("msg").innerText =
-        "تم تسجيل طلبك بنجاح في النظام ";
-
-      localStorage.removeItem("clientName");
-    }
-  </script>
 
 </body>
 </html>
