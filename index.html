@@ -90,6 +90,58 @@
         font-size: 16px;
       }
     }
+    
+    /* ترتيب الهيدر: اللوقو يمين والقائمة يسار */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* حجم اللوقو بدون ضغط */
+.site-logo {
+  max-height: 56px;
+  width: auto;
+}
+
+/* القائمة في نفس السطر */
+.main-nav ul {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* عناصر القائمة */
+.main-nav a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* تصغير ارتفاع الهيدر */
+.site-header {
+  padding: 12px 0;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+  }
+
+  .main-nav ul {
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .site-logo {
+    max-height: 48px;
+  }
+}
+    
   </style>
 </head>
 
