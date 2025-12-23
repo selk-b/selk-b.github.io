@@ -85,6 +85,65 @@
   border-radius: 8px;
 }
     
+    /* === هيدر: اللوقو يسار / القوائم يمين === */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* اللوقو يسار */
+.logo {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.site-logo {
+  height: 56px;   /* لا تغيّر الحجم */
+  width: auto;
+}
+
+/* القوائم يمين */
+.main-nav {
+  order: 2;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  list-style: none;
+}
+
+.main-nav a {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* تصغير الشريط الأزرق */
+.site-header {
+  padding: 12px 0;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .site-logo {
+    height: 52px;
+  }
+
+  .site-header {
+    padding: 10px 0;
+  }
+}
+    
   </style>
 </head>
 
