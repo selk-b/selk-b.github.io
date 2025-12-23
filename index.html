@@ -132,6 +132,59 @@
         font-size: 16px;
       }
     }
+    
+    /* ===== CONTACT REFINEMENT ===== */
+
+.contact-info {
+  text-align: center;
+}
+
+.whatsapp-soft {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0;
+  font-size: 15px;
+  color: #0F4C75;
+  text-decoration: none;
+  background: #EAF4FB;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.whatsapp-soft:hover {
+  background: #D6ECFA;
+  transform: translateY(-1px);
+}
+
+.phone {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ← هذا اللي يوسّط الباركود */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.qr-code {
+  width: 130px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 6px;
+}
+
+.qr-box span {
+  font-size: 12px;
+  color: #777;
+}
+    
   </style>
 </head>
 
@@ -244,10 +297,11 @@
 
       <h2>تواصل معنا</h2>
       <p class="contact-note">
-        تواصل مباشرة عبر واتساب للاستفسار أو حجز المعاينة
+        تواصل مباشرة للاستفسار أو حجز المعاينة
       </p>
 
-      <a href="https://wa.me/966505781824" target="_blank" class="btn btn-primary whatsapp-btn">
+      <!-- زر واتساب ناعم -->
+      <a href="https://wa.me/966505781824" target="_blank" class="whatsapp-soft">
         💬 تواصل عبر واتساب
       </a>
 
@@ -255,6 +309,7 @@
         أو الاتصال على: <strong>0505781824</strong>
       </p>
 
+      <!-- QR Code بالمنتصف -->
       <div class="qr-box">
         <img src="assets/whatsapp_qr.jpeg" class="qr-code" alt="WhatsApp QR Code" />
         <span>امسح الرمز للتواصل السريع</span>
