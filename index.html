@@ -1,148 +1,189 @@
 <!DOCTYPE html>
-<!--
-  WireX خدمة الخدمات الشبكية
-
-  هذه الصفحة هي الصفحة الرئيسية للموقع الإلكتروني.  
-  الغرض منها تعريف الزائر بالخدمات المتاحة وتوجيهه إلى صفحة طلب الخدمة.  
-  تم بناء الموقع باللغة العربية وباتجاه يمين‑إلى‑يسار.  
-  يمكنكم تخصيص النصوص والصور كما تشاؤون.  
--->
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF‑8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WireX – خدمات الشبكات والإنترنت</title>
-    <!-- الخطوط العربية من Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
-    <!-- أيقونات font-awesome لاستخدام الأيقونات الجاهزة -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-XxQxD9wreklftx9NvW7Xu4hD6lCJ5TND9ZRixMX+fKZVkdyifV+WLB6ADm3kQ7eBj6WKuXnjDVx8DawePYVIsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- شريط العنوان والتنقل -->
-    <header class="site-header">
-      <div class="container header-container">
-        <div class="logo">
-          <!-- شعار WireX المخصص. تم تعيين خلفية شفافة وتلوين العناصر باللون الأساسي للموقع -->
-          <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
-          <p class="tagline">خبراء الشبكات والإنترنت</p>
-        </div>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#services">الخدمات</a></li>
-            <li><a href="order.html">طلب خدمة</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WireX – خدمات الشبكات والإنترنت</title>
 
-    <!-- قسم البطل (الواجهة الرئيسية) -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h2>امتلك شبكة منزلية متكاملة</h2>
-        <p>
-          نقدم حلولاً متكاملة لتمديد كوابل الإنترنت، إعداد نقاط التوزيع، تركيب مخارج
-          الشبكة الجدارية، وأنظمة المنزل الذكي. خدماتنا تشمل كل ما تحتاجه لضمان
-          اتصال سريع وآمن في منزلك أو مكتبك.
-        </p>
-        <!-- ملاحظة: التخطيط والحلول مجانية ضمن الخدمة -->
-        <p class="free-plan-note">التخطيط والحلول مجانية مع الخدمة</p>
-        <!-- عرض المناطق التي تتوفر فيها الخدمات -->
-        <p class="service-regions">نخدم المناطق التالية: الدمام، الخبر، الظهران، القطيف وما حولها.</p>
-        <div class="hero-icons">
-          <!-- أيقونات الخدمات مصممة بنفس طابع الشعار (لون أبيض على خلفية شفافة) -->
-          <span class="icon-circle">
-            <img src="assets/hero_globe.png" alt="الإنترنت والشبكات" />
-          </span>
-          <span class="icon-circle">
-            <img src="assets/hero_plug.png" alt="الأسلاك والطاقة" />
-          </span>
-          <span class="icon-circle">
-            <img src="assets/hero_bars.png" alt="قوة الإشارة" />
-          </span>
-          <span class="icon-circle">
-            <img src="assets/hero_dish.png" alt="نقاط التوزيع والراوترات" />
-          </span>
-          <span class="icon-circle">
-            <img src="assets/hero_house.png" alt="الأنظمة الذكية" />
-          </span>
-        </div>
-        <a href="order.html" class="btn btn-primary">اطلب الخدمة الآن</a>
-      </div>
-      <!-- تمت إزالة الصورة الإعلانية لإلغاء التخفيض -->
-      <!-- يمكن إضافة صورة بديلة هنا إذا لزم الأمر -->
-    </section>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 
-    <!-- قسم الخدمات -->
-    <section id="services" class="services">
-      <div class="container">
-        <h2 class="section-title">خدماتنا</h2>
-        <p class="section-desc">
-          نقدم مجموعة متنوعة من الخدمات في أربع فئات رئيسية. اختر الخدمة التي
-          تناسب احتياجاتك.
-        </p>
-        <div class="services-grid">
-          <!-- الخدمة الأولى: التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية) -->
-          <div class="service-category">
-            <img src="assets/service_plan.png" alt="التخطيط وإيجاد الحلول" class="service-icon-large" />
-            <h3>التخطيط وإيجاد الحلول</h3>
-            <p>خدمة مجانية لتقييم احتياجاتك، رسم خطة واضحة وتوفير أفضل الحلول للشبكة.</p>
-          </div>
-          <!-- الخدمة الثانية: تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45) -->
-          <div class="service-category">
-            <img src="assets/service_cable.png" alt="تمديد الكوابل وتركيب رؤوس إيثرنت" class="service-icon-large" />
-            <h3>تمديد الكوابل وتركيب رؤوس إيثرنت</h3>
-            <p>تمديد كيابل الشبكة وتركيب رؤوس RJ45 لتحسين جودة الاتصال.</p>
-          </div>
-          <!-- الخدمة الثالثة: تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع -->
-          <div class="service-category">
-            <img src="assets/service_router.png" alt="تهيئة المودم والراوترات" class="service-icon-large" />
-            <h3>تهيئة المودم أو الراوترات القديمة</h3>
-            <p>تحويل المودم أو الراوتر القديم إلى نقطة توزيع آمنة وفعّالة.</p>
-          </div>
-          <!-- الخدمة الرابعة: تركيب المخارج الجدارية وصيانتها -->
-          <div class="service-category">
-            <img src="assets/service_port.png" alt="تركيب المخارج الجدارية وصيانتها" class="service-icon-large" />
-            <h3>تركيب المخارج الجدارية وصيانتها</h3>
-            <p>تركيب وصيانة مخارج الشبكة الجدارية لضمان أداء طويل الأمد.</p>
-          </div>
-        </div>
-        <div class="smart-home-note">
-          <strong>أنظمة البيت الذكية</strong><br />
-          <span class="small-note">اسأل عنها لمعرفة المزيد</span>
-        </div>
-      </div>
-    </section>
+  <!-- تحسينات بسيطة خاصة بالواجهة -->
+  <style>
+    .hero-content h2 {
+      font-size: 40px;
+      color: #0F4C75;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
 
-    <!-- قسم الاتصال -->
-    <section id="contact" class="contact">
-      <div class="container contact-container">
-        <div class="contact-info">
-          <h2>تواصل معنا</h2>
-          <p>يمكنك التواصل معنا مباشرة عبر تطبيق واتساب:</p>
-          <!-- رقم الواتساب مع أيقونة قابلة للنقر ليفتح واتساب مباشرة -->
-          <p class="phone">
-            <a href="https://wa.me/966505781824" class="whatsapp-link" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i> 0505781824
-            </a>
-          </p>
-          <p>
-            أو امسح رمز الاستجابة السريعة التالي للتواصل السريع:
-          </p>
-          <img src="assets/whatsapp_qr.jpeg" alt="رمز واتساب" class="qr-code" />
-        </div>
-        
-      </div>
-    </section>
+    .hero-main-text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
 
-    <!-- أسفل الصفحة -->
-    <footer class="site-footer">
-      <div class="container">
-        <p>
-          © 2025 Ibrahim Ali. جميع الحقوق محفوظة.
-        </p>
+    .hero-sub-text {
+      font-size: 16px;
+      color: #555;
+      max-width: 680px;
+      margin: 0 auto 18px;
+    }
+
+    .free-plan-note {
+      display: inline-block;
+      background: #EAF4FB;
+      color: #0F4C75;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+
+    .service-regions {
+      font-size: 14px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .hero-cta {
+      margin-top: 26px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 30px;
+      }
+      .hero-main-text {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+      <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
+      <p class="tagline">خبراء الشبكات والإنترنت</p>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="order.html">طلب خدمة</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- الواجهة الرئيسية -->
+<section class="hero">
+  <div class="container hero-content">
+
+    <h2>شبكة بيتك… شغّالة بكامل قوتها</h2>
+
+    <p class="hero-main-text">
+      نخلّي الإنترنت يوصل لكل زاوية في البيت بسرعة ثابتة وبدون تقطيع،
+      مو بس جنب الراوتر.
+    </p>
+
+    <p class="hero-sub-text">
+      نبدأ من التخطيط الصح، وننفّذ بشغل نظيف:
+      تمديد كيابل احترافية، توزيع نقاط الإنترنت بشكل ذكي،
+      وتركيب مخارج جدارية تضمن تغطية قوية في كل مكان.
+    </p>
+
+    <div class="free-plan-note">
+      التخطيط واختيار الحل الأنسب مجانًا مع الخدمة
+    </div>
+
+    <p class="service-regions">
+      نخدم: الدمام، الخبر، الظهران، القطيف وما حولها
+    </p>
+
+    <div class="hero-icons">
+      <span class="icon-circle"><img src="assets/hero_globe.png" /></span>
+      <span class="icon-circle"><img src="assets/hero_plug.png" /></span>
+      <span class="icon-circle"><img src="assets/hero_bars.png" /></span>
+      <span class="icon-circle"><img src="assets/hero_dish.png" /></span>
+      <span class="icon-circle"><img src="assets/hero_house.png" /></span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="order.html" class="btn btn-primary">اطلب تقييم مجاني</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- الخدمات -->
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">خدماتنا</h2>
+    <p class="section-desc">
+      نوفّر حلول متكاملة لترتيب شبكة المنزل من الأساس حتى أفضل أداء.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-category">
+        <img src="assets/service_plan.png" class="service-icon-large" />
+        <h3>التخطيط وإيجاد الحلول</h3>
+        <p>تقييم شامل للشبكة واختيار الحل الأنسب (خدمة مجانية).</p>
       </div>
-    </footer>
-  </body>
+
+      <div class="service-category">
+        <img src="assets/service_cable.png" class="service-icon-large" />
+        <h3>تمديد الكوابل وتركيب رؤوس إيثرنت</h3>
+        <p>تمديد احترافي لضمان سرعة وثبات الاتصال.</p>
+      </div>
+
+      <div class="service-category">
+        <img src="assets/service_router.png" class="service-icon-large" />
+        <h3>تهيئة المودم والراوترات</h3>
+        <p>تحويل الأجهزة إلى نقاط توزيع فعّالة.</p>
+      </div>
+
+      <div class="service-category">
+        <img src="assets/service_port.png" class="service-icon-large" />
+        <h3>تركيب المخارج الجدارية</h3>
+        <p>تنفيذ نظيف وأداء طويل الأمد.</p>
+      </div>
+    </div>
+
+    <div class="smart-home-note">
+      <strong>أنظمة البيت الذكية</strong><br />
+      <span class="small-note">اسأل عنها لمعرفة المزيد</span>
+    </div>
+  </div>
+</section>
+
+<!-- التواصل -->
+<section id="contact" class="contact">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <h2>تواصل معنا</h2>
+      <p>تواصل مباشرة عبر واتساب:</p>
+      <p class="phone">
+        <a href="https://wa.me/966505781824" class="whatsapp-link" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> 0505781824
+        </a>
+      </p>
+      <img src="assets/whatsapp_qr.jpeg" class="qr-code" />
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Ibrahim Ali. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+</body>
 </html>
