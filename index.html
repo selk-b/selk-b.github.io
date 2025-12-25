@@ -6,22 +6,22 @@
   <title>WireX – خدمات الشبكات والإنترنت</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
 
   <style>
     body {
-      font-family: 'Tajawal', sans-serif;
       margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: #f7f9fb;
     }
 
     /* ===== HEADER ===== */
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
       background: #0F4C75;
       padding: 18px 0;
-      transition: all 0.3s ease;
+      transition: all 0.35s ease;
     }
 
     .header-container {
@@ -35,43 +35,45 @@
 
     .site-logo {
       height: 56px;
-      transition: all 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
     .tagline {
       color: #fff;
       font-size: 14px;
       margin-top: 6px;
-      transition: all 0.3s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .site-header.shrink {
-      padding: 8px 0;
+      padding: 10px 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
     }
 
     .site-header.shrink .site-logo {
-      height: 40px;
+      transform: scale(0.8);
     }
 
     .site-header.shrink .tagline {
-      font-size: 12px;
+      opacity: 0;
+      transform: translateY(-6px);
     }
 
     /* ===== HERO ===== */
     .hero {
-      background: #f7f9fb;
-      padding: 60px 0 40px;
+      padding: 60px 20px 40px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 34px;
+      font-size: 32px;
       color: #0F4C75;
       margin-bottom: 16px;
+      font-weight: 700;
     }
 
     .hero-main-text {
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.9;
       color: #333;
       max-width: 720px;
@@ -79,7 +81,7 @@
     }
 
     .hero-sub-text {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.8;
       color: #555;
       max-width: 700px;
@@ -111,14 +113,26 @@
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       min-width: 240px;
       box-shadow: 0 6px 16px rgba(15, 76, 117, 0.25);
+      transition: all 0.25s ease;
+      margin-top: 24px;
     }
 
     .btn-primary:hover {
       background: #0c3d5f;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 26px;
+      }
+      .hero-main-text {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -126,7 +140,7 @@
 <body>
 
 <header class="site-header">
-  <div class="container header-container">
+  <div class="header-container">
     <div class="logo">
       <a href="index.html">
         <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
@@ -137,41 +151,41 @@
 </header>
 
 <section class="hero">
-  <div class="container">
-    <h2>شبكة بيتك قوية في كل زاوية</h2>
+  <h2>شبكة بيتك قوية في كل زاوية</h2>
 
-    <p class="hero-main-text">
-      نخلّي الإنترنت يوصل لكل زاوية في البيت بسرعة ثابتة وبدون تقطيع — مو بس جنب الراوتر.
-    </p>
+  <p class="hero-main-text">
+    نخلّي الإنترنت يوصل لكل زاوية في البيت بسرعة ثابتة وبدون تقطيع —
+    مو بس جنب الراوتر.
+  </p>
 
-    <p class="hero-sub-text">
-      تخطيط ذكي، تمديد نظيف، وتوزيع احترافي لنقاط الشبكة.
-    </p>
+  <p class="hero-sub-text">
+    تخطيط ذكي، تمديد نظيف، وتوزيع احترافي لنقاط الشبكة
+    يضمن اتصال ثابت وتغطية قوية.
+  </p>
 
-    <div class="free-plan-note">
-      التخطيط واختيار الحل الأنسب مجانًا مع الخدمة
-    </div>
-
-    <p class="service-regions">
-      نخدم: الخبر، الظهران، الدمام، القطيف وما حولها 📍
-    </p>
-
-    <a href="order.html" class="btn-primary">
-      طلب معاينة مبدئية
-    </a>
+  <div class="free-plan-note">
+    التخطيط واختيار الحل الأنسب مجانًا مع الخدمة
   </div>
+
+  <p class="service-regions">
+    نخدم: الخبر، الظهران، الدمام، القطيف وما حولها 📍
+  </p>
+
+  <a href="order.html" class="btn-primary">
+    طلب معاينة مبدئية
+  </a>
 </section>
 
 <script>
-  const header = document.querySelector(".site-header");
+const header = document.querySelector(".site-header");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
-      header.classList.add("shrink");
-    } else {
-      header.classList.remove("shrink");
-    }
-  });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
 </script>
 
 </body>
