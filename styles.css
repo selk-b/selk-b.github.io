@@ -513,3 +513,14 @@ img {
   color: var(--primary-color);
   text-decoration: underline;
 }
+
+تعديل الموقع الخاص 
+.footer-link {
+  color: #38bdf8; /* لون رايق */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
