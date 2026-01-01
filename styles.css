@@ -521,18 +521,27 @@ img {
   text-align: center;
 }
 
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-link {
+  display: block;              /* يخلي السطر كامل قابل للنقر */
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .footer-text {
   margin: 0;
   color: #ffffff;
   font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
-.footer-link {
-  color: #1e90ff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
+.footer-link:hover .footer-text {
+  color: #1e90ff;              /* لون أنيق عند المرور */
+  transform: translateY(-1px); /* حركة خفيفة احترافية */
+  opacity: 0.9;
 }
