@@ -64,7 +64,7 @@
   <div class="container">
     <h2 class="section-title">طلب خدمة</h2>
 
- <form action="https://formsubmit.co/selk3579@gmail.com" method="POST">
+    <form id="orderForm" action="https://formsubmit.co/selk3579@gmail.com" method="POST">
 
       <!-- الخدمات -->
       <fieldset class="form-section">
@@ -104,21 +104,21 @@
           <input type="text" id="clientName" name="الاسم" placeholder="اكتب اسمك الكامل" required />
         </div>
 
-<div class="form-group">
-  <label>رقم الجوال</label>
-  <input
-    type="tel"
-    id="phone"
-    name="الجوال"
-    placeholder="05xxxxxxxx"
-    required
-    maxlength="10"
-    inputmode="numeric"
-  />
-  <small id="phoneError" style="color:#b00020; display:none; margin-top:4px;">
-    <!-- رسالة الخطأ تظهر هنا -->
-  </small>
-</div>
+        <div class="form-group">
+          <label>رقم الجوال</label>
+          <input
+            type="tel"
+            id="phone"
+            name="الجوال"
+            placeholder="05xxxxxxxx"
+            required
+            maxlength="10"
+            inputmode="numeric"
+          />
+          <small id="phoneError" style="color:#b00020; display:none; margin-top:4px;">
+            <!-- رسالة الخطأ تظهر هنا -->
+          </small>
+        </div>
 
         <div class="form-group">
           <label>المدينة</label>
@@ -130,7 +130,6 @@
             <option>القطيف</option>
             <option>الجبيل</option>
             <option>اخرى</option>
-        
           </select>
         </div>
 
@@ -139,7 +138,7 @@
           <textarea name="الحي" rows="3"></textarea>
         </div>
 
-<div class="form-group">
+        <div class="form-group">
           <label>نوع السكن</label>
           <select name="نوع السكن" required>
             <option value="">اختر</option>
@@ -159,7 +158,7 @@
 
       <!-- إعدادات الإرسال -->
       <input type="hidden" name="_subject" value="طلب خدمة جديد من موقع selk" />
-      <input type="hidden" name="_next" value="https://selk-b.github.io/thankyou.html" />
+      <input type="hidden" id="nextUrl" name="_next" value="https://selk-b.github.io/thankyou.html" />
       <input type="hidden" name="_captcha" value="false" />
 
       <button type="submit" class="btn btn-primary">
@@ -179,11 +178,18 @@
   </div>
 </footer>
 
-
 <script>
   document.getElementById("orderForm").addEventListener("submit", function () {
     const name = document.getElementById("clientName").value;
+
+    // تخزين احتياطي
     localStorage.setItem("clientName", name);
+
+    // تمرير الاسم بالرابط (الأضمن)
+    const next = document.getElementById("nextUrl");
+    if (next) {
+      next.value = "https://selk-b.github.io/thankyou.html?name=" + encodeURIComponent((name || "").trim());
+    }
   });
 </script>
 
