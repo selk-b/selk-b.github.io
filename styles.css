@@ -560,16 +560,6 @@ img {
   border-radius: 10px;
 }
 
-.site-header {
-  background: rgba(15, 76, 117, 0.85); /* شفافية 85% */
-  padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-transition: background 0.3s ease; /* تأثير انتقال عند التمرير */
-}
 
 .site-header.scrolled {
   background: rgba(15, 76, 117, 0.9); /* شفافية أعلى عند التمرير */
