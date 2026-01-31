@@ -222,6 +222,17 @@
   </div>
 </header>
 
+  <script>
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector(".site-header");
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled"); // تضيف الشفافية الأعلى بعد التمرير
+    } else {
+      header.classList.remove("scrolled"); // تعود الشفافية إلى الوضع الأول
+    }
+  });
+</script>
+
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
@@ -351,17 +362,6 @@
     </a>
   </div>
 </footer>
-
-<script>
-  window.addEventListener("scroll", function() {
-    const header = document.querySelector(".site-header");
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled"); // تضيف الشفافية الأعلى بعد التمرير
-    } else {
-      header.classList.remove("scrolled"); // تعود الشفافية إلى الوضع الأول
-    }
-  });
-</script>
   
 </body>
 </html>
