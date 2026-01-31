@@ -556,3 +556,11 @@ img {
   height: auto;
   border-radius: 10px;
 }
+
+.site-header {
+  background: rgba(15, 76, 117, 0.85); /* شفافية 85% */
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
