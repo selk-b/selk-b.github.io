@@ -545,3 +545,14 @@ img {
   transform: translateY(-1px); /* حركة خفيفة احترافية */
   opacity: 0.9;
 }
+
+.service-image {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.service-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
