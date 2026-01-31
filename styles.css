@@ -45,13 +45,16 @@ img {
 
 /* رأس الموقع */
 .site-header {
-  background-color: var(--secondary-color);
-  color: #fff;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background: rgba(15, 76, 117, 0.85); /* شفافية 85% */
+  padding: 20px 0;
+  position: fixed; /* الهيدر يظل ثابتًا */
+  top: 0; /* يبدأ من أعلى الصفحة */
+  left: 0;
+  width: 100%;
+  z-index: 10; /* تأكد أن الهيدر فوق باقي العناصر */
+  transition: background 0.3s ease; /* تأثير الانتقال عند التمرير */
 }
+
 
 .header-container {
   display: flex;
