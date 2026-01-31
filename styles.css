@@ -26,7 +26,7 @@ body {
 
 .site-header {
   background: rgba(15, 76, 117, 0.85); /* شفافية 85% */
-  padding: 10px 0;
+  padding: 5px 0;
   position: fixed; /* الهيدر يظل ثابتًا */
   top: 0; /* يبدأ من أعلى الصفحة */
   left: 0;
